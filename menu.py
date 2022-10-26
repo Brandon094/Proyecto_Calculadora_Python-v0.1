@@ -1,8 +1,14 @@
-from ast import operator
-from operaciones_basicas import adi, res, multi, div, divE, modu, expo, expo1, expo2, raiz1, raiz2, raiz, todas
+from operaciones_basicas import adi, res, multi, div, divE, modu, expo, expo1, expo2, raiz1, raiz2, raizT, todas
 
 listOperaciones = ["1-Suma: + ", "2-Resta: -", "3-Multiplicacion: * ",
                    "4-Divicion: /", "5-Division Entera: //", "6-Modulo(residuo): %", "7-Elevar(exponenciar): **", "8-Raiz cuadrada: √", "9-Todas: T", "10-Salir: S"]
+
+listSelecionarNum = ["1:1er numero", "2:2do numero", "3:Ambos"]
+
+
+def listas(lista):
+    for i in lista:
+        print(i)
 
 
 def menu(num1, num2):
@@ -31,10 +37,8 @@ def menu(num1, num2):
         modu(num1, num2)
 
     elif operacion == "7" or operacion == "**":
-        listElevar = ["1:1er numero", "2:2do numero", "3:Ambos"]
-        for i in listElevar:
-            print(i)
-        elevar = input("Selecione numero a elevar: ")
+        listas(listSelecionarNum)
+        elevar = input("\nSelecione numero a elevar: ")
 
         if elevar == "1":
             expo1(num1)
@@ -46,17 +50,15 @@ def menu(num1, num2):
             print("¡¡Error!! seleccion invalida")
 
     elif operacion == "8" or operacion == "√":
-        listRaiz = ["1:1er numero", "2:2do numero", "3:Ambos"]
-        for i in listRaiz:
-            print(i)
-        raiz = input("Selecione numero para hallar la raiz cuadrada: ")
+        listas(listSelecionarNum)
+        raiz = input("\nSelecione numero para hallar la raiz cuadrada: ")
 
         if raiz == "1":
             raiz1(num1)
         elif raiz == "2":
             raiz2(num2)
         elif raiz == "3":
-            raiz(num1, num2)
+            raizT(num1, num2)
         else:
             print("¡¡Error!! seleccion invalida")
 
