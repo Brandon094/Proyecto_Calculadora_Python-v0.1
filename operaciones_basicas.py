@@ -16,14 +16,20 @@ def multi(num1, num2):
 
 
 def div(num1, num2):
-    res = num1 / num2
-    print(round(res, 2))
+    if num1 == 0 or num2 == 0:
+        print("No se puede dividir entre cero.\n")
+    else: 
+        res = num1 / num2
+        print(round(res, 2))
+
 
 
 def divE(num1, num2):
-    res = num1 // num2
-    print(int(res))
-
+    if num1 == 0 or num2 == 0:
+        print("No se puede dividir entre cero.\n")
+    else: 
+        res = num1 // num2
+        print(int(res))
 
 def modu(num1, num2):
     res = num1 % num2
@@ -77,9 +83,9 @@ def todas(num1, num2):
     div(num1, num2)
     divE(num1, num2)
     modu(num1, num2)
-    expo(num1, num2)
     expo1(num1)
     expo2(num2)
+    expo(num1, num2)
     raiz1(num1)
     raiz2(num2)
     raizT(num1,num2)
