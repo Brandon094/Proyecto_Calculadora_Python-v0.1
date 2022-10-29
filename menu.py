@@ -1,70 +1,96 @@
-from operaciones_basicas import adi, res, multi, div, divE, modu, expo, expo1, expo2, raiz1, raiz2, raizT, todas
+from operaciones_basicas import adi, res, multi, div, divE, modu, expo, expo1, expo2, raiz1, raiz2, raizT, todas, listas, lP, lN
 
-listOperaciones = ["1-Suma: + ", "2-Resta: -", "3-Multiplicacion: * ",
-                   "4-Divicion: /", "5-Division Entera: //", "6-Modulo(residuo): %", "7-Elevar(exponenciar): **", "8-Raiz cuadrada: √", "9-Todas: T", "10-Salir: S"]
+# Funcion para capturar los numeros
 
-listSelecionarNum = ["1:1er numero", "2:2do numero", "3:Ambos"]
-
-
-def listas(lista):
-    print("\nselecione la operacion deseada:\n")
-    for i in lista:
-        print(i)
 
 def datos():
-    num1 = float(input("Ingrese 1er numero: "))
-    num2 = float(input("Ingrese 2do numero: "))
-    
-    return num1,num2
+    numeros = float(input("Ingrese 1er numero: ")), float(
+        input("Ingrese 2do numero: "))
+
+    return numeros
+
+# Funcion de menu
+
 
 def menu():
-    num = datos()
-    listas(listOperaciones)
+    print("\n")
 
-    operacion = input("\nselecione: ").lower()
+    # llamado a la funcion datos
+    num = datos()
+    # llamado a la funcion listas
+    print("\nselecione la operacion deseada:\n")
+    listas(lP)
+
+    # condicionales para validar la operacion a realizar
+    operacion = input("\nSelecione: ").lower()
+
     if operacion == "1" or operacion == "+":
-        adi(num[0], num[1])
+        r = adi(num[0], num[1])
+        print(f"\nEl resultado de la {lP[0:1:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "2" or operacion == "-":
-        res(num[0], num[1])
+        r = res(num[0], num[1])
+        print(f"\nEl resultado de la {lP[1:2:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "3" or operacion == "*":
-        multi(num[0], num[1])
+        r = multi(num[0], num[1])
+        print(f"\nEl resultado de la {lP[2:3:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "4" or operacion == "/":
-        div(num[0], num[1])
+        r = div(num[0], num[1])
+        print(f"\nEl resultado de la {lP[3:4:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "5" or operacion == "//":
-        divE(num[0], num[1])
+        r = divE(num[0], num[1])
+        print(f"\nEl resultado de la {lP[4:5:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "6" or operacion == "%":
-        modu(num[0], num[1])
+        r = modu(num[0], num[1])
+        print(f"\nEl resultado de la {lP[5:6:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "7" or operacion == "**":
-        listas(listSelecionarNum)
+        listas(lN)
         elevar = input("\nSelecione numero a elevar: ")
-
+        # Condicionales anidados para la selecion de el dato a operar
         if elevar == "1":
-            expo1(num[0])
+            r = expo1(num[0])
+            print(
+                f"\nEl resultado de la {lP[6:7:1]} de {num[0]} y {num[1]} es: {r}")
+
         elif elevar == "2":
-            expo2(num[1])
+            r = expo2(num[1])
+            print(
+                f"\nEl resultado de la {lP[6:7:1]} de {num[0]} y {num[1]} es: {r}")
+
         elif elevar == "3":
-            expo(num[0], num[1])
+            r = expo(num[0], num[1])
+            print(
+                f"\nEl resultado de la {lP[6:7:1]} de {num[0]} y {num[1]} es: {r}")
+
         else:
-            print("¡¡Error!! seleccion invalida")
+            print("\n¡¡Error!! seleccion invalida")
 
     elif operacion == "8" or operacion == "√":
-        listas(listSelecionarNum)
+        listas(lN)
         raiz = input("\nSelecione numero para hallar la raiz cuadrada: ")
-
+        # Condicionales anidados para la selecion de el dato a operar
         if raiz == "1":
-            raiz1(num[0])
+            r = raiz1(num[0])
+            print(
+                f"\nEl resultado de la {lP[7:8:1]} de {num[0]} y {num[1]} es: {r}")
+
         elif raiz == "2":
-            raiz2(num[1])
+            r = raiz2(num[1])
+            print(
+                f"\nEl resultado de la {lP[7:8:1]} de {num[0]} y {num[1]} es: {r}")
+
         elif raiz == "3":
-            raizT(num[0], num[1])
+            r = raizT(num[0], num[1])
+            print(
+                f"\nEl resultado de la {lP[7:8:1]} de {num[0]} y {num[1]} es: {r}")
+
         else:
-            print("¡¡Error!! seleccion invalida")
+            print("\n¡¡Error!! seleccion invalida")
 
     elif operacion == "9" or operacion == "t":
         todas(num[0], num[1])
@@ -75,5 +101,3 @@ def menu():
 
     else:
         print("¡¡Error!! opcion invalida")
-
-
