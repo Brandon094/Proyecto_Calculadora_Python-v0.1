@@ -26,27 +26,33 @@ def menu():
 
     if operacion == "1" or operacion == "+":
         r = adi(num[0], num[1])
-        print(f"\nEl resultado de la {lP[0:1:1]} de {num[0]} y {num[1]} es: {r}")
+        print(
+            f"\nEl resultado de la {lP[0:1:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "2" or operacion == "-":
         r = res(num[0], num[1])
-        print(f"\nEl resultado de la {lP[1:2:1]} de {num[0]} y {num[1]} es: {r}")
+        print(
+            f"\nEl resultado de la {lP[1:2:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "3" or operacion == "*":
         r = multi(num[0], num[1])
-        print(f"\nEl resultado de la {lP[2:3:1]} de {num[0]} y {num[1]} es: {r}")
+        print(
+            f"\nEl resultado de la {lP[2:3:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "4" or operacion == "/":
         r = div(num[0], num[1])
-        print(f"\nEl resultado de la {lP[3:4:1]} de {num[0]} y {num[1]} es: {r}")
+        print(
+            f"\nEl resultado de la {lP[3:4:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "5" or operacion == "//":
         r = divE(num[0], num[1])
-        print(f"\nEl resultado de la {lP[4:5:1]} de {num[0]} y {num[1]} es: {r}")
+        print(
+            f"\nEl resultado de la {lP[4:5:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "6" or operacion == "%":
         r = modu(num[0], num[1])
-        print(f"\nEl resultado de la {lP[5:6:1]} de {num[0]} y {num[1]} es: {r}")
+        print(
+            f"\nEl resultado de la {lP[5:6:1]} de {num[0]} y {num[1]} es: {r}")
 
     elif operacion == "7" or operacion == "**":
         listas(lN)

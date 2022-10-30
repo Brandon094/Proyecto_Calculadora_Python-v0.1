@@ -117,31 +117,33 @@ def raizT(num1, num2):
     return int(res1), int(res2)
 
 
+def matriz(num1, num2):
+    fun = adi(num1, num2), res(num1, num2), multi(num1, num2), div(num1, num2), divE(num1, num2), modu(
+        num1, num2), expo1(num1), expo2(num2), expo(num1, num2), raiz1(num1), raiz2(num2), raizT(num1, num2)
+
+    matriz = []
+    tam_fun = len(fun)
+    print("\nMostrando matriz de resultados\n")
+    for i in range(0, tam_fun):
+        maTemp = []
+
+        for j in range(0, 2):
+            maTemp.append(fun[i])
+        matriz.append(maTemp)
+
+    # mostrar Matriz
+    c = 0
+    cc = 1
+    for i in range(0, tam_fun):
+        for j in range(1):
+            print(f"{i+1}:Resultado = {matriz[i][j]}", end="\t")
+            c += 1
+            cc += 1
+        print("\t")
+
+
 # Funcion para Mostrar todas las operacionnes
 
 
 def todas(num1, num2):
-    print(
-        f"El resultado de  {lP[0:1:1]} de {int(num1)} y {int(num2)} es: {adi(num1, num2)}")
-    print(
-        f"El resultado de  {lP[1:2:1]} de {int(num1)} y {int(num2)} es: {res(num1,num2)}")
-    print(
-        f"El resultado de  {lP[2:3:1]} de {int(num1)} y {int(num2)} es: {multi(num1,num2)}")
-    print(
-        f"El resultado de  {lP[3:4:1]} de {int(num1)} y {int(num2)} es: {div(num1,num2)}")
-    print(
-        f"El resultado de  {lP[4:5:1]} de {int(num1)} y {int(num2)} es: {divE(num1,num2)}")
-    print(
-        f"El resultado de  {lP[5:6:1]} de {int(num1)} y {int(num2)} es: {modu(num1,num2)}")
-    print(
-        f"El resultado de  {lP[6:7:1]} de {int(num1)} es: {expo1(num1)}")
-    print(
-        f"El resultado de  {lP[6:7:1]} de {int(num2)} es: {expo1(num2)}")
-    print(
-        f"El resultado de  {lP[6:7:1]} de {int(num1)} y {int(num2)} es: {expo(num1,num2)}")
-    print(
-        f"El resultado de  {lP[7:8:1]} de {int(num1)} es: {raiz1(num1)}")
-    print(
-        f"El resultado de  {lP[7:8:1]} de {int(num2)} es: {raiz2(num2)}")
-    print(
-        f"El resultado de  {lP[7:8:1]} de {int(num1)} y {int(num2)} es: {raizT(num1,num2)}")
+    matriz(num1, num2)
